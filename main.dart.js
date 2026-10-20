@@ -106401,7 +106401,7 @@ q=A.b([],r)
 if(l.length!==0)q.push(new A.qt(l,10,new A.aaj(this),o,t.X_))
 if(l.length===0)q.push(B.LB)
 p=k.length
-if(p!==0)B.b.P(q,A.b([B.of,new A.vr("Riwayat Konfirmasi",""+p+" permintaan",o),new A.qt(k,10,new A.aak(),o,t.X_)],r))
+if(p!==0)B.b.P(q,A.b([B.of,new A.vr("Riwayat Konfirmasi",""+p+" permintaan",o),new A.qt(k,20,new A.aak(),o,t.X_)],r))
 return A.az(A.b([new A.mF(n+" \xb7 "+j,"Perlu Persetujuan",s,new A.SH(""+m,"menunggu",o),o,o),new A.mE(A.az(q,B.u,B.f,B.l),o)],r),B.u,B.f,B.l)},
 Ai(a){return this.acd(a)},
 acd(a){var s=0,r=A.I(t.H),q=1,p=[],o=this,n,m,l,k
@@ -106699,7 +106699,7 @@ break
 case 5:return A.G(null,r)
 case 1:return A.F(p.at(-1),r)}})
 return A.H($async$AB,r)},
-H(a){var s,r,q,p,o,n,m=this,l=null,k=m.gat2(),j=A.aND(m.e,k.length,10),i=A.eE(k,j*10,l,A.W(k).c).hR(0,10),h=m.a.c
+H(a){var s,r,q,p,o,n,m=this,l=null,k=m.gat2(),j=A.aND(m.e,k.length,20),i=A.eE(k,j*20,l,A.W(k).c).hR(0,20),h=m.a.c
 h=h.d===B.ca?h.gfz(0)+" \xb7 "+m.a.c.guT(0):"Tim IT \xb7 Semua Kategori"
 s=A.aVw(B.ai,B.jc,"Barang",new A.aB3(m))
 r=A.a1(14,B.J,l,l,B.r)
@@ -106711,7 +106711,7 @@ o=o.d===B.ca?"Kategori "+o.guT(0):"Semua Kategori"
 n=t.p
 o=A.b([q,B.hW,A.aR(A.b([p,new A.n_(o,B.Ef,l)],n),B.o,B.f,B.l,0,l),B.ba],n)
 if(k.length!==0)o.push(A.kb(new A.aB5(m,i)))
-o.push(new A.uP(j,k.length,10,new A.aB6(m),l))
+o.push(new A.uP(j,k.length,20,new A.aB6(m),l))
 if(k.length===0)o.push(B.Lz)
 return A.az(A.b([new A.mF(h,"Kelola Barang","Tambah, ubah, dan hapus katalog inventaris.",s,r,l),new A.mE(A.az(o,B.u,B.f,B.l),l)],n),B.u,B.f,B.l)},
 al3(){return A.x3(A.kb(new A.aAY(this)),B.dx)},
@@ -107080,7 +107080,7 @@ r=r.a
 s=t.p
 r=A.b([A.kb(new A.ah5(p,new A.ah(r,new A.ah6(),A.W(r).i("ah<1>")).gv(0),q,new A.ah(q,new A.ah7(),A.W(q).i("ah<1>")).gv(0))),B.of,new A.vr("Semua Permintaan",""+q.length+" permintaan",null)],s)
 if(q.length===0)r.push(B.Lx)
-if(q.length!==0)r.push(new A.qt(q,10,new A.ah8(),null,t.X_))
+if(q.length!==0)r.push(new A.qt(q,20,new A.ah8(),null,t.X_))
 return A.az(A.b([B.ab7,new A.mE(A.az(r,B.u,B.f,B.l),null)],s),B.u,B.f,B.l)}}
 A.ah4.prototype={
 $2(a,b){return a+b.d},
@@ -107976,7 +107976,7 @@ $label0$0:{if(B.hI===r){s="Barang yang sudah Anda terima"
 break $label0$0}if(B.ca===r){s="Divisi "+s.guT(0)
 break $label0$0}s="Seluruh divisi"
 break $label0$0}return s},
-H(a0){var s,r,q,p,o,n,m,l,k,j,i,h=this,g=null,f=h.gafW(),e=A.aND(h.r,f.length,10),d=A.eE(f,e*10,g,A.W(f).c).hR(0,10).eN(0),c=h.gaqa(),b=A.aVw(B.bo,B.mV,"Excel",h.a.d),a=A.a1(14,B.J,g,g,B.r)
+H(a0){var s,r,q,p,o,n,m,l,k,j,i,h=this,g=null,f=h.gafW(),e=A.aND(h.r,f.length,20),d=A.eE(f,e*20,g,A.W(f).c).hR(0,20).eN(0),c=h.gaqa(),b=A.aVw(B.bo,B.mV,"Excel",h.a.d),a=A.a1(14,B.J,g,g,B.r)
 a=A.et(g,B.au,!1,g,A.ej(B.i,"Cari barang atau transaksi...",B.jh),g,g,1,!1,new A.aGC(h),g,a,B.bt,g)
 s=h.ag8(f)
 r=t.p
@@ -107995,7 +107995,7 @@ q.push(A.eo(!1,B.Q,!0,g,A.lh(!1,g,!0,new A.aG(new A.al(14,8,j,8),A.aR(n,B.o,B.f,
 s=A.b([s,B.cP,A.vY(q,8,8),B.Dv,new A.vr("Aktivitas Terbaru",""+f.length+" transaksi",g)],r)
 if(f.length===0)s.push(B.Ly)
 if(f.length!==0)s.push(A.kb(new A.aGF(h,d)))
-s.push(new A.uP(e,f.length,10,new A.aGG(h),g))
+s.push(new A.uP(e,f.length,20,new A.aGG(h),g))
 return A.az(A.b([new A.mF("Riwayat persediaan \xb7 "+c,"Mutasi Barang",g,b,a,g),new A.mE(A.az(s,B.u,B.f,B.l),g)],r),B.u,B.f,B.l)},
 ag8(a){var s,r,q,p=null,o=A.W(a).i("ah<1>"),n=new A.ah(a,new A.aGs(),o).jp(0,0,new A.aGt()),m=new A.ah(a,new A.aGu(),o).jp(0,0,new A.aGv())
 o=new A.aGw()
@@ -108314,9 +108314,9 @@ A.a5e.prototype={
 H(a){var s,r,q,p,o,n,m,l,k,j,i=this,h=null,g=$.c4().a,f=A.W(g).i("ah<1>"),e=A.a4(new A.ah(g,new A.aKq(i),f),f.i("o.E"))
 B.b.ee(e,new A.aKr())
 s=B.b.jp(e,0,new A.aKs())
-r=A.aND(i.f,e.length,10)
+r=A.aND(i.f,e.length,20)
 f=A.W(e)
-q=A.eE(e,r*10,h,f.c).hR(0,10)
+q=A.eE(e,r*20,h,f.c).hR(0,20)
 p=A.a1(14,B.J,h,h,B.r)
 p=A.et(h,B.au,!1,h,A.ej(B.i,"Cari kode atau nama barang...",B.jh),h,h,1,!1,new A.aKt(i),h,p,B.bt,h)
 o=t.p
@@ -108326,7 +108326,7 @@ n=A.b([],o)
 for(m=A.b(["Semua"],t.s),B.b.P(m,$.wL),l=m.length,k=0;k<m.length;m.length===l||(0,A.A)(m),++k){j=m[k]
 n.push(new A.Eo(j,i.e===j,new A.aKx(i,j),h))}f=A.b([f,B.cP,A.vY(n,8,8),B.bh],o)
 if(e.length!==0)f.push(A.kb(new A.aKy(i,q)))
-f.push(new A.uP(r,e.length,10,new A.aKz(i),h))
+f.push(new A.uP(r,e.length,20,new A.aKz(i),h))
 if(e.length===0)f.push(B.LA)
 return A.az(A.b([new A.mF("Mode pantau \xb7 Semua divisi","Stok Seluruh Barang","Persediaan semua divisi dalam satu daftar.",h,p,h),new A.mE(A.az(f,B.u,B.f,B.l),h)],o),B.u,B.f,B.l)}}
 A.aKq.prototype={
