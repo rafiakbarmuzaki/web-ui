@@ -33,6 +33,50 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  <script>
+    // HP dengan beberapa kamera belakang: browser sering memilih lensa ultra-wide (0,5x) untuk facingMode "environment".
+    // Pilih kamera belakang utama (bukan ultra-wide/macro/tele) sebelum pemindai barcode memakainya.
+    (function () {
+      var md = navigator.mediaDevices;
+      if (!md || !md.getUserMedia || !md.enumerateDevices) return;
+      var orig = md.getUserMedia.bind(md);
+      var skip = /ultra|wide|0[.,]5|macro|tele|zoom|depth|infrared/i;
+      function num(l) { var m = /(\d+)/.exec(l); return m ? parseInt(m[1], 10) : 99; }
+      function wantsBack(c) {
+        var v = c && c.video;
+        if (!v || v === true) return false;
+        var f = v.facingMode;
+        if (f && typeof f === 'object') f = f.exact || f.ideal;
+        if (Array.isArray(f)) f = f[0];
+        return f === 'environment' && !v.deviceId;
+      }
+      async function mainBack() {
+        var devs = (await md.enumerateDevices()).filter(function (d) {
+          return d.kind === 'videoinput' && /back|rear|environment|belakang/i.test(d.label);
+        });
+        var good = devs.filter(function (d) { return !skip.test(d.label); });
+        good.sort(function (a, b) { return num(a.label) - num(b.label); });
+        return good.length && devs.length > 1 ? good[0].deviceId : null;
+      }
+      md.getUserMedia = async function (c) {
+        var stream = await orig(c);
+        try {
+          if (!wantsBack(c)) return stream;
+          var id = await mainBack();
+          var cur = stream.getVideoTracks()[0];
+          if (!id || !cur || cur.getSettings().deviceId === id) return stream;
+          var video = Object.assign({}, c.video);
+          delete video.facingMode;
+          video.deviceId = { exact: id };
+          var better = await orig(Object.assign({}, c, { video: video }));
+          stream.getTracks().forEach(function (t) { t.stop(); });
+          return better;
+        } catch (e) {
+          return stream;
+        }
+      };
+    })();
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
