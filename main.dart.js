@@ -30615,7 +30615,7 @@ _.a=b
 _.b=c
 _.c=d},
 aaa(a,b,c){return new A.e8(a,b)},
-b5b(){return"http://10.11.110.65:3000"},
+b5b(){return"https://stock.sv-ui.id"},
 e8:function e8(a,b){this.a=a
 this.b=b},
 aa9:function aa9(){this.a=null},
